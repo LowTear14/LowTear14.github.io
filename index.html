@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Luther Ullyses Nuelan – Full Stack Developer</title>
+<meta name="description" content="Portfolio of Nuelan, Luther Ullyses, a full stack developer who builds websites and games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f2f5f3;
+    --ink: #15221d;
+    --muted: #526159;
+    --line: #cfd8d3;
+    --accent: #ff5a4e;
+    --blue: #2f5bff;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1714;
+      --ink: #eef4f0;
+      --muted: #9fb0a6;
+      --line: #25332d;
+      --accent: #ff7a6f;
+      --blue: #7d9bff;
+      --card: #16211c;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 1.05rem;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+
+  header.top { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 0; }
+  header.top strong { font-weight: 800; }
+  nav a { margin-left: 1.25rem; text-decoration: none; color: var(--muted); }
+  nav a:hover { color: var(--ink); }
+
+  .hero { padding: 4rem 0 3.5rem; }
+  .hero h1 {
+    font-size: clamp(2.6rem, 8vw, 5.5rem);
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+  }
+  .hero p { max-width: 52ch; margin-top: 1.5rem; color: var(--muted); font-size: 1.2rem; }
+  .btns { margin-top: 2rem; display: flex; gap: .75rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: .75rem 1.4rem; border-radius: 999px;
+    text-decoration: none; font-weight: 600; border: 2px solid var(--ink);
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #1a0a08; }
+  .btn:hover { transform: translateY(-2px); }
+
+  section { padding: 3rem 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+
+  .projects { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1.5rem; display: flex; flex-direction: column; }
+  .card h3 { font-size: 1.25rem; font-weight: 600; }
+  .card p { color: var(--muted); margin: .6rem 0 1rem; flex: 1; }
+  .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1rem; }
+  .tags span { font-size: .85rem; padding: .15rem .6rem; border-radius: 6px; background: var(--bg); border: 1px solid var(--line); }
+  .links a { margin-right: 1rem; font-weight: 600; color: var(--blue); }
+
+  .skills { display: flex; flex-wrap: wrap; gap: .6rem; list-style: none; }
+  .skills li { padding: .4rem 1rem; border: 2px solid var(--ink); border-radius: 999px; font-weight: 600; }
+
+  .about { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .about p + p { margin-top: 1rem; }
+  dl dt { font-weight: 600; }
+  dl dd { color: var(--muted); margin-bottom: 1rem; }
+
+  footer { padding: 3rem 0 4rem; border-top: 1px solid var(--line); color: var(--muted); }
+  footer a { color: var(--ink); font-weight: 600; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn:hover { transform: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <strong>Luther Ullyses Nuelan</strong>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>I build websites and games.</h1>
+      <p>I'm a full stack developer with 2 years of experience. I turn ideas into fast, easy-to-use web apps and playable games.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <!-- TODO: replace these 3 with your real projects. Copy a whole <article> to add more. -->
+        <article class="card">
+          <h3>Padilla Veterinary Clinic</h3>
+          <p>Padilla Veterinary Clinic System is a web app I built to replace the clinic's manual record-keeping, inventory counting, and
+            phone-based updates. Pet owners can book appointments without double-booking, follow their pet's boarding status, and message
+            the clinic, while staff manage clients, confirm appointments, and track stock from one admin portal, where inventory is deducted
+            automatically when an appointment is confirmed. It's built with React and Firebase (Firestore, Authentication, and Cloud Functions),
+            with automated email verification and reminders.</p>
+          <div class="tags"><span>React</span><span>Tailwind CSS</span><span>Firestore</span><span>Cloud Functions</span></div>
+          <div class="links"><a href="https://github.com/YOUR-USERNAME/REPO-NAME">Code</a><a href="https://YOUR-USERNAME.github.io/REPO-NAME">Live site</a></div>
+        </article>
+        <article class="card">
+          <h3>Game project name</h3>
+          <p>Describe the game, how you play it, and what you built.</p>
+          <div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+          <div class="links"><a href="https://github.com/YOUR-USERNAME/REPO-NAME">Code</a><a href="https://YOUR-USERNAME.github.io/REPO-NAME">Play</a></div>
+        </article>
+        <article class="card">
+          <h3>Another project</h3>
+          <p>Say what problem it solves and what you learned.</p>
+          <div class="tags"><span>Python</span><span>Ruby</span></div>
+          <div class="links"><a href="https://github.com/YOUR-USERNAME/REPO-NAME">Code</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML</li><li>CSS</li><li>Tailwind CSS</li><li>JavaScript</li><li>React Router</li>
+        <li>JSON</li><li>Java</li><li>Ruby</li><li>Python</li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About me</h2>
+      <div class="about">
+        <div>
+          <p>I design and build websites and games from the front end to the back end. I work as a freelance full stack developer and website designer.</p>
+          <p>Before I moved into development, I worked in administration, so I plan carefully, communicate clearly, and finish what I start.</p>
+        </div>
+        <dl>
+          <dt>Education</dt>
+          <dd>BS in Information Technology, STI College Batangas (2022–present)</dd>
+          <dt>Experience</dt>
+          <dd>Freelance Full Stack Developer (2023–present)<br>Website Designer (2022–present)</dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:you@example.com">you@example.com</a> or find me on
+      <a href="https://github.com/YOUR-USERNAME">GitHub</a> and
+      <a href="https://www.linkedin.com/in/YOUR-PROFILE">LinkedIn</a>.</p>
+  </footer>
+</div>
+</body>
+</html>
